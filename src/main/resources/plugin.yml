@@ -1,0 +1,4 @@
+name: DeathCounter
+version: '${version}'
+main: org.eu.deathcounter.DeathCounter
+api-version: '1.20'
