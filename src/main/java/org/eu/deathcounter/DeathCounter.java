@@ -18,11 +18,9 @@ import org.eu.deathcounter.commands.SetKillNumber;
 
 public final class DeathCounter extends JavaPlugin implements Listener {
 
-    final int noKill = 0;
-    final int firstKill = 5;
-    final int midKill = 20;
-    final int finalKill = 40;
 
+
+    Handles handle = new Handles();
 
 
     @Override
@@ -39,17 +37,7 @@ public final class DeathCounter extends JavaPlugin implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
         int playerkills = player.getStatistic(Statistic.PLAYER_KILLS);
-        if(playerkills==firstKill){
-            setPlayerNameColor(player,ChatColor.BLUE);
-        }else if(playerkills>firstKill&&playerkills<midKill){
-            setPlayerNameColor(player,ChatColor.YELLOW);
-        }else if(playerkills>midKill&&playerkills<finalKill){
-            setPlayerNameColor(player,ChatColor.RED);
-        }else if(playerkills>finalKill){
-            setPlayerNameColor(player,ChatColor.DARK_RED);
-        }else{
-            setPlayerNameColor(player,ChatColor.DARK_PURPLE);
-        }
+        setPlayerNameColor(player,handle.checkChatColor(playerkills));
         Bukkit.getLogger().info(player.getDisplayName());
     }
     private void setPlayerNameColor(Player player, ChatColor color){
@@ -75,4 +63,5 @@ public final class DeathCounter extends JavaPlugin implements Listener {
     public void onDisable() {
         // Plugin shutdown logic
     }
+
 }
