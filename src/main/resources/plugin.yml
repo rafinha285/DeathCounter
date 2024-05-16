@@ -1,4 +1,13 @@
 name: DeathCounter
-version: '${version}'
+version: 1.20.1
 main: org.eu.deathcounter.DeathCounter
 api-version: '1.20'
+commands:
+  mortes:
+    description: Mostra quantas mortes você tem.
+    usage: /mortes
+  tier:
+    description: Mostra quem matou mais amiguinhos.
+    usage: /tier
+  setKill:
+    usage: /setKill
