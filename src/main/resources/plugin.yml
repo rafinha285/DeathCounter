@@ -2,6 +2,7 @@ name: DeathCounter
 version: 1.20.1
 main: org.eu.deathcounter.DeathCounter
 api-version: '1.20'
+depend: [ClansLite]
 commands:
   mortes:
     description: Mostra quantas mortes você tem.
@@ -11,3 +12,5 @@ commands:
     usage: /tier
   setKill:
     usage: /setKill
+  tierClans:
+    usage: /tierClans

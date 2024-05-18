@@ -6,9 +6,12 @@ import org.bukkit.Statistic;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
 
-public class DeathView implements CommandExecutor {
+import java.util.List;
+
+public class DeathView implements CommandExecutor, TabExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
         if(!(sender instanceof Player)){
@@ -30,6 +33,11 @@ public class DeathView implements CommandExecutor {
         }
         sender.sendMessage(ChatColor.YELLOW +"Mortes "+player.getName()+": "+ChatColor.RED+player.getStatistic(Statistic.PLAYER_KILLS));
         return true;
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args){
+        return null;
     }
 
 }

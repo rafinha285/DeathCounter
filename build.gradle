@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'org.eu'
-version = '0.1'
+version = '1.0'
 
 repositories {
     mavenCentral()
@@ -19,6 +19,7 @@ repositories {
 
 dependencies {
     compileOnly "org.spigotmc:spigot-api:1.20.1-R0.1-SNAPSHOT"
+    compileOnly files('libs/ClansLite.jar')
 }
 
 def targetJavaVersion = 17

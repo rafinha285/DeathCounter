@@ -9,9 +9,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.eu.deathcounter.Handles;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class DeathTier implements CommandExecutor {
     Handles handle = new Handles();
@@ -25,7 +23,7 @@ public class DeathTier implements CommandExecutor {
         });
         StringBuilder result = new StringBuilder();
         result.append(ChatColor.BOLD)
-                .append(ChatColor.AQUA+"TIERLIST DE QUEM MAIS MATOU:"+ChatColor.RESET+"\n");
+                .append(ChatColor.AQUA+"----TIERLIST DE QUEM MAIS MATOU----"+ChatColor.RESET+"\n");
 
         for(OfflinePlayer player:players){
             int playerKills = player.getStatistic(Statistic.PLAYER_KILLS);

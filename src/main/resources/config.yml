@@ -1,0 +1,11 @@
+#ajuste para mortes de cada player
+kills:
+  nokill: 0
+  first: 5
+  mid: 20
+  final: 40
+points:
+  nopoints: 0
+  first: 50
+  mid: 200
+  final: 400
